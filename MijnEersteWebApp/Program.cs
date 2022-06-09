@@ -1,7 +1,10 @@
+using MijnEersteWebApp.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IMovieDatabase, MovieDatabase>();
 
 var app = builder.Build();
 
